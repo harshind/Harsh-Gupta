@@ -75,3 +75,10 @@ body {
   font-size: 1.4rem;
   z-index: 9998;
 }
+.concierge-card {
+  transition: all 0.4s ease;
+}
+.concierge-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold) !important;
+}
