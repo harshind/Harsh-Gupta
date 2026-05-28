@@ -1,0 +1,77 @@
+:root {
+  --gold: #d4af37;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+  color: #eee;
+}
+
+.navbar {
+  background: rgba(10,10,10,0.95) !important;
+  backdrop-filter: blur(12px);
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a9c?w=2000') center/cover;
+}
+
+.text-gold { color: var(--gold); }
+.btn-gold {
+  background: var(--gold);
+  color: black;
+  font-weight: 600;
+}
+.btn-gold:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.property-card {
+  background: #111;
+  border: 1px solid #222;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.property-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.3rem;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: all 0.3s;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 110px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gold);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 9998;
+}
