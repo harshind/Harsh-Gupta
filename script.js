@@ -118,6 +118,94 @@ window.addEventListener('scroll', () => {
 function showContactModal() {
   alert("Thank you! Harsh Gupta will contact you shortly.");
 }
+// Concierge Packages
+const conciergePackages = [
+  {
+    title: "Essential Concierge",
+    price: "15,000",
+    period: "per year",
+    currency: "USD",
+    highlight: false,
+    features: [
+      "24/7 dedicated concierge assistant",
+      "Travel arrangements & bookings",
+      "Restaurant & event reservations",
+      "Basic lifestyle requests",
+      "Monthly consultation with Harsh Gupta"
+    ]
+  },
+  {
+    title: "Signature Concierge",
+    price: "25,000",
+    period: "per year",
+    currency: "USD",
+    highlight: true,
+    features: [
+      "All Essential services",
+      "Private jet & yacht charter coordination",
+      "Exclusive club & VIP event access",
+      "Art, wine & collectibles sourcing",
+      "Family relocation & education placement",
+      "Quarterly strategy meetings"
+    ]
+  },
+  {
+    title: "Elite Concierge",
+    price: "45,000",
+    period: "per year",
+    currency: "USD",
+    highlight: false,
+    features: [
+      "All Signature services",
+      "Dedicated personal concierge team",
+      "Global property portfolio management",
+      "Tax optimization & wealth structuring",
+      "Security & privacy consultation",
+      "Bespoke experiences (e.g. private island stays)",
+      "Unlimited requests with priority handling"
+    ]
+  }
+];
 
+// Render Packages
+function renderConciergePackages() {
+  const container = document.getElementById('conciergePackages');
+  container.innerHTML = '';
+
+  conciergePackages.forEach(pkg => {
+    const card = `
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 concierge-card ${pkg.highlight ? 'border-gold shadow-lg' : ''}" style="background:#111; border:1px solid #333;">
+          ${pkg.highlight ? `<div class="text-center py-2 bg-gold text-dark fw-bold">MOST POPULAR</div>` : ''}
+          
+          <div class="card-body p-5 text-center">
+            <h4 class="text-gold">${pkg.title}</h4>
+            <h2 class="display-5 fw-bold text-white">$${pkg.price}</h2>
+            <p class="text-muted">${pkg.period}</p>
+            
+            <ul class="list-unstyled my-4 text-start">
+              ${pkg.features.map(feature => `
+                <li class="mb-3">
+                  <i class="fas fa-check text-gold me-2"></i> ${feature}
+                </li>
+              `).join('')}
+            </ul>
+            
+            <button class="btn btn-gold w-100" onclick="selectPackage('${pkg.title}')">
+              Choose ${pkg.title}
+            </button>
+          </div>
+        </div>
+      </div>`;
+    container.innerHTML += card;
+  });
+}
+
+function selectPackage(packageName) {
+  alert(`Thank you for your interest in the ${packageName} package.\n\nHarsh Gupta will personally contact you within 24 hours to discuss customization.`);
+}
 // Initialize
-window.onload = fetchProperties;
+window.onload = () => {
+  fetchProperties();
+  renderConciergePackages();   // ← New line
+};
