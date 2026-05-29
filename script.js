@@ -145,7 +145,7 @@ const conciergePackages = [
     price: "25,000",
     period: "per year",
     currency: "USD",
-    highlight: true,
+    highlight: false,
     features: [
       "All Essential services",
       "Private jet & yacht charter coordination",
