@@ -182,7 +182,7 @@ function renderConciergePackages() {
     const card = `
       <div class="col-lg-4 col-md-6">
         <div class="card h-100 concierge-card ${pkg.highlight ? 'border-gold shadow-lg' : ''}" style="background:#111; border:1px solid #333;">
-          ${pkg.highlight ? `<div class="text-center py-2 bg-gold text-dark fw-bold">MOST POPULAR</div>` : ''}
+          ${pkg.highlight ? `<div class="popular-badge">MOST POPULAR</div>` : ''}
           
           <div class="card-body p-5 text-center">
             <h4 class="text-gold">${pkg.title}</h4>
