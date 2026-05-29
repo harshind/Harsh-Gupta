@@ -119,6 +119,14 @@ body {
   text-decoration: none !important;
 }
 
+a.whatsapp-float,
+a.whatsapp-float:hover,
+a.whatsapp-float:focus,
+a.whatsapp-float:active {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 110px;
