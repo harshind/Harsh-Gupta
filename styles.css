@@ -98,8 +98,8 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 55px;
   background: #25D366;
   color: white;
   border-radius: 50%;
@@ -147,10 +147,7 @@ body {
   font-size: 18px;
   line-height: 1;
 }
-/* .concierge-card {
-  border-radius: 20px;
-  overflow: hidden;
-} */
+
 .concierge-card {
     background:#111;
     border:1px solid #333;
